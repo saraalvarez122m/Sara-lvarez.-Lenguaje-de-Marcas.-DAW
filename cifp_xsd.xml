@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cifp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="cifp.xsd">
+    
+    <alumno id="01">
+        <nombre>Juan</nombre>
+        <apellidos>Garrido Ponts</apellidos>
+        <fecha_nacimiento>1995-05-12</fecha_nacimiento>
+        <email>joangarrido@gmail.com</email>
+        <telefono>657257485</telefono>
+        <direccion>Calle Ledesmas, 21</direccion>
+        <fecha_matricula>2025-11-02</fecha_matricula>
+        <curso>DAW</curso>
+    </alumno>
+
+    <profesor id="02">
+        <nombre>Maite</nombre>
+        <apellidos>Cabrera Mustafa</apellidos>
+        <fecha_incorporacion>2025-08-25</fecha_incorporacion>
+        <departamento>informatica</departamento>
+        <asignatura id_asignatura="03">
+            <nombre_asignatura ciclo="DAM">Lenguaje Marcas</nombre_asignatura>
+            <fecha_inicio>2024-11-11</fecha_inicio>
+            <fecha_fin>2025-05-23</fecha_fin>
+        </asignatura>
+    </profesor>
+</cifp>

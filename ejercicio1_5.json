@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "cifp": {
+      "type": "object",
+      "properties": {
+        "alumnos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer" },
+              "nombre": { "type": "string" },
+              "apellidos": { "type": "string" },
+              "fecha_nacimiento": { "type": "string" },
+              "email": { "type": "string" },
+              "telefono": { "type": "string" },
+              "direccion": { "type": "string" },
+              "fecha_matricula": { "type": "string" },
+              "curso": {
+                "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+              }
+            },
+            "required": ["id", "nombre", "apellidos", "fecha_matricula", "curso"]
+          }
+        },
+        "profesor": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer" },
+              "nombre": { "type": "string" },
+              "apellidos": { "type": "string" },
+              "fecha_nacimiento": { "type": "string" },
+              "email": { "type": "string" },
+              "telefono": { "type": "string" },
+              "direccion": { "type": "string" },
+              "fecha_incorporacion": { "type": "string" },
+              "departamento": {
+                "enum": ["informatica", "electricidad", "automocion"]
+              },
+              "asignatura": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "nombre_asignatura": { "type": "string" },
+                    "ciclo": {
+                      "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+                    },
+                    "fecha_inicio": { "type": "string" },
+                    "fecha_fin": { "type": "string" }
+                  },
+                  "required": ["nombre_asignatura", "ciclo"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
