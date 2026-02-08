@@ -1,0 +1,22 @@
+<!ELEMENT cifp (alumno | profesor)*>
+<!ELEMENT alumno (nombre, apellidos, fecha_nacimiento?, email?, telefono?, direccion?, fecha_matricula, curso)>
+<!ATTLIST alumno id ID #REQUIRED>
+<!ELEMENT profesor (nombre, apellidos, fecha_nacimiento?, email?, telefono?, direccion?, fecha_incorporacion, departamento, asignatura*)>
+<!ATTLIST profesor id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT fecha_matricula (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT fecha_incorporacion (#PCDATA)>
+<!ELEMENT departamento (#PCDATA)>
+<!ATTLIST departamento tipo (informatica|electricidad|automocion) #REQUIRED>
+<!ELEMENT asignatura (nombre_asignatura, fecha_inicio?, fecha_fin?)>
+<!ELEMENT nombre_asignatura (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_fin (#PCDATA)>
+<!ATTLIST asignatura id ID #REQUIRED>
+<!ATTLIST nombre_asignatura ciclo (DAM | DAW | ASIX | SMX | SEIA | ER | AUT) #REQUIRED>

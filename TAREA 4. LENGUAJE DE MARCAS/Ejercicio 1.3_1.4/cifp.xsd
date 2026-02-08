@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="cifp">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        
+        <xs:element name="alumno">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="apellidos" type="xs:string"/>
+              <xs:element name="fecha_nacimiento" type="xs:string" minOccurs="0"/>
+              <xs:element name="email" type="xs:string" minOccurs="0"/>
+              <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+              <xs:element name="direccion" type="xs:string" minOccurs="0"/>
+              <xs:element name="fecha_matricula" type="xs:string"/>
+              <xs:element name="curso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="DAM"/><xs:enumeration value="DAW"/>
+                    <xs:enumeration value="ASIX"/><xs:enumeration value="SMX"/>
+                    <xs:enumeration value="SEIA"/><xs:enumeration value="ER"/><xs:enumeration value="AUT"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="profesor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="apellidos" type="xs:string"/>
+              <xs:element name="fecha_nacimiento" type="xs:string" minOccurs="0"/>
+              <xs:element name="email" type="xs:string" minOccurs="0"/>
+              <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+              <xs:element name="direccion" type="xs:string" minOccurs="0"/>
+              <xs:element name="fecha_incorporacion" type="xs:string"/>
+              <xs:element name="departamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="informatica"/>
+                    <xs:enumeration value="electricidad"/>
+                    <xs:enumeration value="automocion"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="asignatura" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre_asignatura">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ciclo" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="fecha_inicio" type="xs:string" minOccurs="0"/>
+                    <xs:element name="fecha_fin" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="id_asignatura" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

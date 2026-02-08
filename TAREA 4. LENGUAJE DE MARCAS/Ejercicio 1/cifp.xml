@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cifp SYSTEM "cifp.dtd">
+
+<cifp>
+  <alumno id="a1">
+    <nombre>Juan</nombre>
+    <apellidos>Garrido Ponts</apellidos>
+    <fecha_nacimiento>1995-04-12</fecha_nacimiento>
+    <email>juangarrido@gmail.com</email>
+    <telefono>658142358</telefono>
+    <direccion>Calle Ses savines,21</direccion>
+    <fecha_matricula>2024-02-08</fecha_matricula>
+    <curso>DAM</curso>
+  </alumno>
+
+  <profesor id="p1">
+    <nombre>Maite</nombre>
+    <apellidos>Cabrera</apellidos>
+    <fecha_nacimiento>1996-01-25</fecha_nacimiento>
+    <email>maitecm@gmail.com</email>
+    <telefono>658963201</telefono>
+    <direccion>Calle Ses dones,82</direccion>
+    <fecha_incorporacion>2023-05-01</fecha_incorporacion>
+    <departamento tipo="informatica">Sistemas</departamento>
+    <asignatura id="asig1">
+      <nombre_asignatura ciclo="DAM">Programacion</nombre_asignatura>
+      <fecha_inicio>2024-02-01</fecha_inicio>
+      <fecha_fin>2024-06-30</fecha_fin>
+    </asignatura>
+  </profesor>
+</cifp>

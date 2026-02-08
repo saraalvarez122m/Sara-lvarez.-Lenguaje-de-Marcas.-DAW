@@ -1,0 +1,40 @@
+{
+  "$schema": "./ejercicio1_5.json",
+  "cifp": {
+    "alumnos": [
+      {
+        "id": 1,
+        "nombre": "Juan",
+        "apellidos": "Garrido Ponts",
+        "fecha_nacimiento": "1995-12-05",
+        "email": "joangarrido@gmail.com",
+        "telefono": "854712234",
+        "direccion": "Calle Blanes, 21",
+        "fecha_matricula": "2025-11-11",
+        "curso": "DAW"
+      }
+    ],
+    "profesor": [
+      {
+        "id": 101,
+        "nombre": "Maite",
+        "apellidos": "Cabrera Mustafa",
+        "fecha_nacimiento": "1996-08-08",
+        "email": "maitecm@gmail.com",
+        "telefono": "657745874",
+        "direccion": "Calle Ledesmas, 82",
+        "fecha_incorporacion": "2026-01-01",
+        "departamento": "automocion",
+        "asignatura": [
+          {
+            "id_asignatura": 50,
+            "nombre_asignatura": "Lenguaje Marcas",
+            "ciclo": "DAM",
+            "fecha_inicio": "2022-03-15",
+            "fecha_fin": "2025-12-30"
+          }
+        ]
+      }
+    ]
+  }
+}
